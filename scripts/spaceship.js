@@ -37,4 +37,8 @@ class spaceShip {
     relativeRotateRight() {
         this.shipRotation-=this.rotationSpeed;
     }
+
+    getPosition() {
+        return this.position;
+    }
 }

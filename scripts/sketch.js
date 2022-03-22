@@ -42,7 +42,7 @@ function draw() {
   push();
   textStyle(BOLD);
   textSize(128);
-  fill(l%225, 0, 0);
+  fill(l%225, abs(spaceCraft.getPosition().x*spaceCraft.getPosition().y)%255, abs(spaceCraft2.getPosition().x*spaceCraft2.getPosition().y)%255);
   if (show) {
     noFill();
   }
@@ -85,9 +85,10 @@ function draw() {
   if (keyIsDown(40)) {
     spaceCraft2.relativeBackward(2);
   }
+}
 
-  if (keyIsDown(84)) {
+function keyPressed() {
+  if (keyCode === 84) {
     show=!show;
   }
-  
 }
