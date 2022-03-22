@@ -14,7 +14,7 @@ class spaceShip {
         push();
         translate(this.position.x, this.position.y);
         rotate(this.shipRotation);
-        image(this.img, 0, 0, 20, 20);
+        image(this.img, 0, 0, 25, 25);
         pop();
     }
 

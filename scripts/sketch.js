@@ -6,6 +6,7 @@ let shipY = 0;
 let spaceCraft;
 let spaceCraft2;
 let l=0;
+let show=false;
 
 function preload() {
   spaceShipImg = loadImage('./assets/spaceship48px.png')
@@ -42,7 +43,9 @@ function draw() {
   textStyle(BOLD);
   textSize(128);
   fill(l%225, 0, 0);
-  // noFill();
+  if (show) {
+    noFill();
+  }
   rotate(radians(l));
   text('YOUR MOM', -25, 45);
   pop();
@@ -81,6 +84,10 @@ function draw() {
   }
   if (keyIsDown(40)) {
     spaceCraft2.relativeBackward(2);
+  }
+
+  if (keyIsDown(84)) {
+    show=!show;
   }
   
 }
