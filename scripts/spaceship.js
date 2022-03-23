@@ -1,11 +1,13 @@
 class spaceShip {
-    constructor(x, y, img, speed) {
+    constructor(x, y, img, speed, size) {
         this.position = createVector(x,y);
         this.speedMS = speed;
         this.speedP = speed;
         this.shipRotation = 0;
         this.rotationSpeed = 4;
         this.img = img;
+        this.size = size;
+        this.health = 10;
 
         translate(windowWidth/2-this.position.x, windowHeight/2-this.position.y);
     }
@@ -14,7 +16,7 @@ class spaceShip {
         push();
         translate(this.position.x, this.position.y);
         rotate(this.shipRotation);
-        image(this.img, 0, 0, 25, 25);
+        image(this.img, 0, 0, this.size, this.size);
         pop();
     }
 
@@ -40,5 +42,17 @@ class spaceShip {
 
     getPosition() {
         return this.position;
+    }
+
+    getSize() {
+        return this.size;
+    }
+
+    getHealth() {
+        return this.health;
+    }
+
+    setHealth(health) {
+        this.health = health;
     }
 }
