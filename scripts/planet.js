@@ -3,10 +3,11 @@ class planet {
         this.x = x;
         this.y = y;
         this.diameter = diameter;
-        this.radius = diameter/2;
         this.star = star;
         this.mass = mass;
+    }
 
+    show() {
         push();
         noStroke();
         fill('#ff0000ff');

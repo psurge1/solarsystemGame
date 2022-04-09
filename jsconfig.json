@@ -3,5 +3,5 @@
     "*.js",
     "libraries/*.js",
     "c:\\Users\\suraj\\.vscode\\extensions\\samplavigne.p5-vscode-1.2.8\\p5types\\global.d.ts"
-, "utils/tools.js", "scripts/star.js", "scripts/moon.js", "scripts/planet.js", "scripts/sketch.js", "scripts/spaceship.js"  ]
+, "utils/tools.js", "scripts/star.js", "scripts/moon.js", "scripts/planet.js", "scripts/sketch.js", "scripts/spaceship.js", "utils/p5collide2D.js" ]
 }

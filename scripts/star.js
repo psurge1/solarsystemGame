@@ -3,10 +3,11 @@ class star {
         this.x = x;
         this.y = y;
         this.diameter = diameter;
-        this.radius = diameter/2;
         this.circumference = 2*Math.PI*this.radius**2
         this.mass = mass;
-        
+    }
+
+    show() {
         push();
         noStroke();
         fill('#c7c700ff');

@@ -1,5 +1,5 @@
 class spaceShip {
-    constructor(x, y, img, speed, size) {
+    constructor(x, y, img, speed, size, damage) {
         this.position = createVector(x,y);
         this.speedMS = speed;
         this.speedP = speed;
@@ -8,6 +8,7 @@ class spaceShip {
         this.img = img;
         this.size = size;
         this.health = 10;
+        this.damage = damage;
 
         translate(windowWidth/2-this.position.x, windowHeight/2-this.position.y);
     }
@@ -18,6 +19,17 @@ class spaceShip {
         rotate(this.shipRotation);
         image(this.img, 0, 0, this.size, this.size);
         pop();
+    }
+
+    fire(distance) {
+        let fCoord = [
+            this.position.x+this.size/2*cos(this.shipRotation-90),
+            this.position.y+this.size/2*sin(this.shipRotation-90),
+            distance*cos(this.shipRotation-90)+this.position.x,
+            distance*sin(this.shipRotation-90)+this.position.y
+        ];
+        line(fCoord[0], fCoord[1], fCoord[2], fCoord[3]);
+        return fCoord;
     }
 
     relativeBackward(backSpeed=this.speedP) {
@@ -54,5 +66,9 @@ class spaceShip {
 
     setHealth(health) {
         this.health = health;
+    }
+
+    getDamage() {
+        return this.damage;
     }
 }
