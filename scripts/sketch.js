@@ -20,7 +20,7 @@ var inControls2 = [73, 76, 74, 75];
 var inName;
 var showMenu = false;
 
-var show=false;
+var show=true;
 var starting = true;
 
 var alpha, beta;
@@ -156,7 +156,7 @@ function draw() {
     noFill();
   }
   rotate(radians(l));
-  text('MUSIC DOCTOR MARCADES', -25, 22.5);
+  text('MESSAGE', -25, 22.5);
   pop();
   
   l+=10;
