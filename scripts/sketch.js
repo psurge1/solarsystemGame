@@ -42,7 +42,7 @@ function setup() {
   menuButton = createButton('Menu');
   menuButton.style('border', color(0, 0, 0, 0));
   menuButton.style('background-color', color(0, 0, 0, 0));
-  menuButton.style('color', color(255, 255, 255));
+  menuButton.style('color', color(255, 255, 255, 0));
   menuButton.position(10, 10);
   menuButton.mousePressed(dMenu);
   
@@ -166,7 +166,7 @@ function draw() {
     textSize(36);
     fill(l%255, l%255, l%255);
     // noFill();
-    text('use WASD or the arrow keys', 0, -240);
+    text('use WASD and Q or IJKL and O', 0, -240);
     pop();
   }
 
@@ -203,7 +203,7 @@ function draw() {
     if (keyIsDown(83)) {
       spaceCraft.relativeBackward(2);
     }
-    if (keyIsDown(16)) {
+    if (keyIsDown(81)) {
       push();
       stroke(255, 255, 255);
       fireLine1 = spaceCraft.fire(120);
@@ -226,7 +226,7 @@ function draw() {
     if (keyIsDown(75)) {
       spaceCraft2.relativeBackward(2);
     }
-    if (keyIsDown(191)) {
+    if (keyIsDown(79)) {
       push();
       stroke(255, 255, 255);
       fireLine1 = spaceCraft2.fire(120);
